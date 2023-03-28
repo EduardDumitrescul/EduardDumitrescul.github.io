@@ -111,6 +111,7 @@ nav li.dropdown {
 }
 
 .slide-fullpage {
+    position: relative;
     height: 100vh;
     width: 100vw;
 
@@ -121,6 +122,18 @@ nav li.dropdown {
     justify-items: center;
 }
 
+
+.slide-title {
+    position: absolute;
+    left: 0.6em;
+    top: 0.4em;
+    font-size: 4em;
+    text-transform: uppercase;
+    background-color: transparent;
+    text-decoration: none;
+    border: none!important;
+}
+
 #slide-general {
     justify-content: space-between;
 }
@@ -128,7 +141,7 @@ nav li.dropdown {
     display: inline-block;
     left: 0;
     height: 100%;
-    aspect-ratio: 0.72;
+    aspect-ratio: 72 / 100;
     max-width: 60vw;
     object-fit: cover;
 }
@@ -147,7 +160,6 @@ nav li.dropdown {
 
 #slide-projects {
     display: flex;
-    flex: auto auto auto auto auto;
     align-items: center;
 
 }
@@ -164,6 +176,8 @@ nav li.dropdown {
 .card-project {
     max-width: 17%;
     width: auto;
+    max-height: 100%;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -189,8 +203,9 @@ nav li.dropdown {
 
 .card-project>img {
     display: inline-block;
-    width: 100%;
-    aspect-ratio: 1;
+    max-width: 100%;
+    width: 20em;
+    aspect-ratio: 1 / 1;
     margin-bottom: 3em;
     opacity: 0.6;
 }
@@ -250,7 +265,7 @@ nav li.dropdown {
 }
 .card-work>img {
     width: 20vw;
-    aspect-ratio: 1;
+    aspect-ratio: 1 / 1;
     margin-right: 2em;
 
 }
@@ -277,6 +292,7 @@ nav li.dropdown {
 .timeline {
     position: relative;
     max-width: 80vw;
+    width: 60vw;
     margin: 0 auto;
 }
 
@@ -377,10 +393,6 @@ nav li.dropdown {
 .timeline .container:hover {
     opacity: 1;
 }
-.timeline h2,
-.timeline h3 {
-    min-width: 40em;
-}
 .timeline h2 {
     font-size: 2em;
     margin-bottom: 0.4em;
@@ -392,6 +404,43 @@ nav li.dropdown {
 .timeline h3 {
     font-size: 1.2em;
     margin-bottom: 0.4em;
+}
+
+h2.text-slide-left {
+    animation-delay: 0.2s;
+}
+h3.text-slide-left {
+    animation-delay: 0.3s;
+}
+h4.text-slide-left {
+    animation-delay: 0.4s;
+}
+h5.text-slide-left {
+    animation-delay: 0.5s;
+}
+h6.text-slide-left {
+    animation-delay: 0.6s;
+}
+.text-slide-left {
+    animation: slide-left 1s ease-in-out;
+    -webkit-animation: slide-left 1s ease-in-out;
+}
+
+@keyframes slide-left {
+    0% {
+        margin-left: 20%;
+        width: 120%;
+        transform: rotate(-4deg);
+        -webkit-transform: rotate(-4deg);
+        -moz-transform: rotate(-4deg);
+        -ms-transform: rotate(-4deg);
+        -o-transform: rotate(-4deg);
+}
+    100% {
+        margin-left: 0;
+        width: 100%;
+        
+}
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
@@ -435,7 +484,7 @@ nav li.dropdown {
 
 #slide-awards img {
     width: 32vw;
-    aspect-ratio: 1;
+    aspect-ratio: 1 / 1;
     margin: 0 4vw;
 }
 #slide-awards figcaption {
@@ -462,7 +511,7 @@ nav li.dropdown {
 #contact-grid img {
     display: inline-block;
     height: 4em;
-    aspect-ratio: 1;
+    aspect-ratio: 1 / 1;
     margin: 1em;
 }
 
@@ -476,4 +525,5 @@ nav li.dropdown {
     padding: 1em 2em;
     margin: 2em;
 }
+
 
