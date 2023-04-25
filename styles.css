@@ -1,4 +1,8 @@
 
+html {
+    scroll-behavior: smooth;
+  }
+
 :root {
     --dark: #171717;
     --darkVariant: #262626;
