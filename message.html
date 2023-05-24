@@ -8,15 +8,19 @@
 
     <body>
         <section class="slide-fullpage theme-dark">
-            <form>
+            <form method="get" action="submit-message" target="iframe">
                 <label for="input-name">Name:</label> <br>
-                <input type="text" id="input-name" name="input-name"><br>
+                <input type="text" id="input-name" name="inputName"><br>
                 <label for="input-email">Email Address:</label><br>
-                <input type="email" id="input-email" name="input-email"><br>
+                <input type="email" id="input-email" name="inputEmail"><br>
                 <label for="input-message">Your Message:</label><br>
-                <textarea id="input-message" name="input-message"></textarea><br>
-                <button>Submit</button>
+                <textarea id="input-message" name="inputMessage"></textarea><br>
+                <button type="submit" id="submit-button">Submit</button>
             </form>
+
+            <iframe src="" height="200" width="500" name="iframe"></iframe> 
         </section>
+
+        <script src="message.js"></script>
     </body>
 </html>
